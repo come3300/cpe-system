@@ -1,0 +1,99 @@
+.Login_header {
+    background: rgba(93, 253, 154, 0.466);
+    height: 80px;
+    font-size: 20px;
+    text-align: right;
+    line-height: 70px;
+}
+
+.header-title {
+    padding: 0px 20px;
+}
+
+.loginmenu {
+    background-color: rgba(93, 253, 154, 0.466);
+    width: 70%;
+    height: 700px;
+    text-align: center;
+    position: relative;
+    left: 15%;
+}
+
+.loginplace {
+    position: relative;
+    left: 28%;
+    bottom: 20%;
+    padding: 20px;
+}
+.loginmail {
+    display: flex;
+    text-align: center;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+    margin: 10px 0;
+    
+}
+
+.loginpass {
+    display: flex;
+    text-align: center;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+   
+}
+
+.output {
+    margin: 20px;
+    position: relative;
+    top: 100px;
+    background-color: rgb(174, 186, 196);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1b2538;
+    line-height: 45px;
+}
+
+.newlogin {
+    margin: 20px;
+    position: relative;
+    top: 100px;
+    background-color: rgb(174, 186, 196);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1b2538;
+    text-align: center;
+    line-height: 45px;
+}
+
+h1 {
+    position: relative;
+    top: 10%;
+    font-size: 40px;
+}
+
+h3 {
+    position: relative;
+    top: 10%;
+    font-size: 20px;
+}
+
+.loginbutton {
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    left: 34%;
+}

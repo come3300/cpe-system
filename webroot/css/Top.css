@@ -1,0 +1,83 @@
+.Login_header {
+    background: rgba(93, 253, 154, 0.466);
+    height: 80px;
+    font-size: 20px;
+    text-align: right;
+    line-height: 70px;
+}
+
+.header-title {
+    padding: 0px 20px;
+}
+
+.button {
+    background-color: rgba(241, 248, 253, 0.979);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    font-size: 10px;
+    position: relative;
+    right: 90%;
+    bottom: 110%;
+    border: none;
+}
+
+.output {
+    margin: 20px;
+    background-color: rgba(241, 248, 253, 0.979);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    font-size: 10px;
+    text-decoration: none;
+    color: #1b2538;
+}
+
+.operations {
+    display: flex;
+    background-color: rgba(241, 248, 253, 0.979);
+    background-position: center;
+    width: 70%;
+    position: relative;
+    left: 12%;
+    margin: 40px 20px;
+}
+
+.imports {
+    background: rgba(93, 253, 154, 0.466);
+    height: 70px;
+    margin: 10px;
+    position: absolute;
+    left: 5%;
+}
+
+.exports {
+    background-color: rgba(93, 253, 154, 0.466);
+    text-align: right;
+    position: relative;
+    left:  70%;
+    margin: 10px;
+    height: 70px;
+    width: 200px;
+}
+
+.export {
+    margin: 20px;
+    background-color: rgba(241, 248, 253, 0.979);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    font-size: 10px;
+    position: absolute;
+    right: 10%;
+    text-decoration: none;
+
+    
+}
+
