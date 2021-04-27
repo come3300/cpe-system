@@ -4,9 +4,11 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Auth\DefaultPasswordHasher;
 
 class UsersController extends AppController
 {
+  
 
   public function beforeFilter(Event $event)
   {
@@ -25,24 +27,6 @@ class UsersController extends AppController
     $this->set(compact('user'));
   }
 
-  public function initialize()
-  {
-    $this->loadComponent('Flash');
-    $this->loadComponent('Auth', [
-      'loginRedirect' => [
-        'controller' => 'tops',
-        'action' => 'main'
-      ],
-
-      'logoutRedirect' => [
-        'controller' => 'pages',
-        'action' => 'display',
-        'home'
-      ]
-    ]);
-  }
-
-
 
   public function add()
   {
@@ -58,6 +42,7 @@ class UsersController extends AppController
     }
     $this->set('user', $user);
   }
+
   public function login()
   {
     if ($this->request->is('post')) {

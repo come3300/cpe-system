@@ -1,0 +1,105 @@
+.Login_header {
+    background: rgba(93, 253, 154, 0.466);
+    height: 80px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.header-title {
+    padding: 0px 20px;
+}
+
+.loginmenu {
+    background-color: rgba(93, 253, 154, 0.466);
+    width: 70%;
+    height: 500px;
+    text-align: center;
+    position: relative;
+    left: 15%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.loginplace {
+    position: relative;
+    margin: 10% 0;
+}
+
+.loginmail {
+    text-align: left;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+}
+
+.loginuser {
+    text-align: left;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+}
+
+.loginrole{
+    text-align: left;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+}
+.loginpass {
+    text-align: left;
+    margin: 10px 0;
+    width: 500px;
+    height: 30px;
+    border: 3px solid #1b2538;
+    border-radius: 4px;
+}
+
+.output {
+    margin: 20px;
+    background-color: rgb(174, 186, 196);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1b2538;
+    line-height: 45px;
+}
+
+.newlogin {
+    margin: 20px;
+    background-color: rgb(174, 186, 196);
+    border-radius: 20px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    outline: none;
+    font-size: 13px;
+    text-decoration: none;
+    color: #1b2538;
+    text-align: center;
+    line-height: 45px;
+}
+
+h1 {
+    position: relative;
+    top: 10%;
+    font-size: 40px;
+}
+
+h3 {
+    position: relative;
+    top: 10%;
+    font-size: 20px;
+}
+
+.loginbutton {
+    display: flex;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+}

@@ -8,12 +8,17 @@
 
 .header-title {
     padding: 0px 20px;
+    margin: 10px;
+}
+
+.importbutton{
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 .button {
     background-color: rgba(241, 248, 253, 0.979);
     border-radius: 20px;
-    border: none;
     width: 100px;
     height: 30px;
     outline: none;
@@ -39,7 +44,7 @@
 
 .operations {
     display: flex;
-    background-color: rgba(241, 248, 253, 0.979);
+    background-color: rgba(216, 216, 216, 0.979);
     background-position: center;
     width: 70%;
     position: relative;
@@ -50,9 +55,10 @@
 .imports {
     background: rgba(93, 253, 154, 0.466);
     height: 70px;
+    width: 600px;   
     margin: 10px;
     position: absolute;
-    left: 5%;
+    left: 3%;
 }
 
 .exports {

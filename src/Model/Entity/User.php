@@ -10,8 +10,12 @@ class User extends Entity
 
   // 主キーフィールド "id" を除く、すべてのフィールドを一括代入可能にします。
   protected $_accessible = [
-    '*' => true,
-    'id' => false
+    'username' => true,
+    'email' => true,
+    'password' => true,
+    'role' =>true,
+    'created' =>true,
+    'modified' =>true
   ];
 
   protected $_hidden = [
@@ -19,15 +23,6 @@ class User extends Entity
   ];
 
   // ...
-
-  protected function __setPassword($value)
-  {
-    if (strlen($value)) {
-      $hasher = new DefaultPasswordHasher();
-
-      return $hasher->hash($value);
-    }
-  }
 
   protected function _setPassword($password)
   {
