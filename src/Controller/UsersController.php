@@ -8,7 +8,6 @@ use Cake\Auth\DefaultPasswordHasher;
 
 class UsersController extends AppController
 {
-  
 
   public function beforeFilter(Event $event)
   {
@@ -27,12 +26,11 @@ class UsersController extends AppController
     $this->set(compact('user'));
   }
 
-
   public function add()
   {
     $user = $this->Users->newEntity();
     if ($this->request->is('post')) {
-      // 3.4.0 より前は $this->request->data() が使われました。
+      // 3.4.0 より前は $this->request->data()が使われました。
       $user = $this->Users->patchEntity($user, $this->request->getData());
       if ($this->Users->save($user)) {
         $this->Flash->success(__('The user has been saved.'));
