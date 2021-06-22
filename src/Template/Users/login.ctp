@@ -1,6 +1,7 @@
 <?php
 
 use PhpParser\Node\Stmt\Label;
+use Cake\Routing\Router;
 
 echo $this->Html->css('Login');
 ?>
@@ -12,7 +13,7 @@ echo $this->Html->css('Login');
 
     <div class="loginmenu">
         <h1>LOGIN MENU</h1>
-        
+
 
         <?= $this->Flash->render() ?>
         <?= $this->Form->create(null, ['type' => "post"]) ?>
@@ -21,7 +22,13 @@ echo $this->Html->css('Login');
             <?= $this->Form->control("email", ['class' => 'loginmail', "placeholder" => "Eメール", "label" => false]); ?>
             <?= $this->Form->control("password", ['class' => 'loginpass', "placeholder" => "パスワード", "label" => false]); ?>
             <div class="loginbutton">
-                <?= $this->html->link("新規登録", "http://192.168.10.10/users/add", ['class' => 'newlogin']); ?>
+                <a href="<?php echo $this->Url->build
+                ([
+                'controller' => 'Users',
+                'action' => 'add',
+                 ]); ?>" 
+                 class=“output”>新規登録</a>
+
                 <?= $this->Form->submit(__('Login'), ['class' => 'output']); ?>
                 <?= $this->Form->end() ?>
             </div>
