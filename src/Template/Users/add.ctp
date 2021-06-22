@@ -24,11 +24,11 @@ echo $this->Html->css('Add');
         </div>
 
         <div class="loginbutton">
-            <?= $this->html->link(
-                'ログイン画面へ',
-                "http://192.168.10.10/users/login",
-                ['class' => 'output']
-            ); ?>
+            <a href="<?php echo $this->Url->build([
+             'controller' => 'Users',
+             'action' => 'login', ]); ?>"
+              class=“output”>ログイン画面へ</a>
+
             <?= $this->Form->button(__('Submit'), ['class' => 'output']); ?>
 
 
