@@ -8,11 +8,12 @@ echo $this->Html->css('Top');
 <div class='login'>
   <div class="Login_header">
     <p class="header-title">CPE System</p>
-    <a href="<?php echo $this->Url->build([
-    'controller' => 'Users',
-    'action' =>'login',]); ?>" 
-     class=“output”>ログイン画面へ</a>
-     
+    <a href="<?php echo $this->Url->build
+              ([
+                'controller' => 'Users',
+                'action' => 'login',
+              ]); ?>" class=“output”>ログイン画面へ</a>
+
   </div>
 
   <div class="operations">
@@ -41,19 +42,20 @@ echo $this->Html->css('Top');
         <th>CHECK</th>
       </tr>
 
-      <!-- 　下記からcsvをまとめた配列のtable -->
-      <?php
-      $i = 0;
-      foreach (array_map(null, $result_date, $result_number, $result_lend, $result_borrow) as
-        [$date_value, $number_value, $lend_value, $borrow_value]) { ?>
-        <tr>
-          <td><?= $date_value; ?> </td>
-          <td><?= $number_value; ?></td>
-          <td><?= $lend_value; ?></td>
-          <td><?= $borrow_value; ?></td>
-          <td><input type="checkbox" name="cb3" <?= rand(0, 100) < 50 ? 'checked' : '' ?>></td>
-        </tr>
-      <?php } ?>
+        　<--下記からcsvをまとめた配列のtable -->
+        <?php
+        foreach (array_map(null, $result_date, $result_number, $result_lend, $result_borrow) as
+          [$date_value, $number_value, $lend_value, $borrow_value]) 
+            { ?>
+          <tr>
+            <td><?= $date_value; ?> </td>
+            <td><?= $number_value; ?></td>
+            <td><?= $lend_value; ?></td>
+            <td><?= $borrow_value; ?></td>
+            <td><input type="checkbox" name="cb3" <?= rand(0, 100) < 50 ? 'checked' : '' ?>></td>
+            
+          </tr>
+        <?php } ?>
 
     </table>
   </div>

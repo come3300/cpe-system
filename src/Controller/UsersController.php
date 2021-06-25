@@ -42,7 +42,6 @@ class UsersController extends AppController
       $this->Flash->error(__('エラー表示'));
     }
     $this->set('user', $user);
-    $url = Router::url(['controller' => 'Users', 'action' => 'login',], true);
   }
 
   public function login()
