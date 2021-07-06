@@ -1,30 +1,37 @@
 <?php
-echo $this->Html->css('Article');
+
+use PhpParser\Node\Stmt\Label;
+use Cake\Routing\Router;
+
+echo $this->Html->css('Login');
 ?>
 
 <div class='login'>
     <div class="Login_header">
-        <p class="header-title">ログインページ</p>
+        <h3>CPE System</h3>
     </div>
+
     <div class="loginmenu">
-        <h1>なっちゃんシステム</h1>
-        <h3>LOGIN MENU</h3>
+        <h1>LOGIN MENU</h1>
+
 
         <?= $this->Flash->render() ?>
-        <?= $this->Form->create() ?>
+        <?= $this->Form->create(null, ['type' => "post"]) ?>
 
         <div class="loginplace">
-            <?= $this->Form->control("email", ['class' => 'loginmail']); ?>
-            <?= $this->Form->control("password", ['class' => 'loginpass']); ?>
-        </div>
+            <?= $this->Form->control("email", ['class' => 'loginmail', "placeholder" => "Eメール", "label" => false]); ?>
+            <?= $this->Form->control("password", ['class' => 'loginpass', "placeholder" => "パスワード", "label" => false]); ?>
+            <div class="loginbutton">
+                <a href="<?php echo $this->Url->build
+                ([
+                'controller' => 'Users',
+                'action' => 'add',
+                 ]); ?>" 
+                 class=“output”>新規登録</a>
 
-        <div class="loginbutton">
-            <?= $this->html->link(
-                "新規登録",
-                "http://192.168.10.10/users/add",
-                ['class' => 'newlogin']
-            ); ?>
-            <?= $this->Form->submit(__('Login'), ['class' => 'output']); ?>
-            <?= $this->Form->end() ?>
+                <?= $this->Form->submit(__('Login'), ['class' => 'output']); ?>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
+</div>

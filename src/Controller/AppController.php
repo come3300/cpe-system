@@ -55,20 +55,20 @@ class AppController extends Controller
             'authenticate' => [
                 'Form' => [
                     'fields' => [
-                        'username' => 'email',
+                        "username" => "email",
                         "password" => "password",
-                 ]
+                    ]
                 ]
             ],
         ]);
     }
 
-    
+
 
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index', 'view', 'display', "main"]);
+        $this->Auth->allow(['index', 'view', 'display', "main","test"]);
     }
 
-    //...
+   
 }

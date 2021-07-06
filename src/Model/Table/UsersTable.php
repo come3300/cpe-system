@@ -11,12 +11,14 @@ class UsersTable extends Table
   {
     return $validator
       ->notEmpty('name', 'A username is required')
-      ->notEmpty('passsword', 'A password is required')
-      ->notEmpty('role', 'A role is required')
-      ->add('role', 'inList', [
-        'rule' => ['inList', ['admin', 'author']],
-        'message' => 'Please enter a valid role'
-      ]);
+      ->notEmpty('password', 'A password is required')
+      ->notEmpty('role', 'A role is required');
   }
-  
+
+  public function initialize(array $config)
+  {
+    $this->addBehavior('Timestamp');
+    // Just add the belongsTo relation with CategoriesTable
+   
+  }
 }

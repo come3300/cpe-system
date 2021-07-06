@@ -1,28 +1,36 @@
 <?php
-echo $this->Html->css('Article');
+
+use Cake\Form\Form;
+
+echo $this->Html->css('Add');
+
 ?>
 
 <div class='login'>
     <div class="Login_header">
-        <p class="header-title">新規登録</p>
+        <h3>CPE System</h3>
+        <p class="header-title">新規登録ページ</p>
     </div>
     <div class="loginmenu">
-        <h1>なっちゃんシステム</h1>
-        <h3>新規登録</h3>
+        <h1>新規登録</h1>
 
         <?= $this->Flash->render() ?>
-        <?= $this->Form->create() ?>
-
+        <?= $this->Form->create($user) ?>
         <div class="loginplace">
-            <?= $this->Form->control("email", ['class' => 'loginmail',]); ?>
-            <?= $this->Form->control("username", ['class' => 'loginmail']); ?>
-            <?= $this->Form->control("password", ['class' => 'loginpass', 'autocomplete' => 'off']); ?>
+            <?= $this->Form->control("email", ['class' => 'loginmail', "placeholder" => "Eメール", "label" => false]); ?>
+            <?= $this->Form->control("username", ['class' => 'loginuser', "placeholder" => "ユーザーネーム", "label" => false]); ?>
+            <?= $this->Form->control("password", ['class' => 'loginpass', "placeholder" => "パスワード", "label" => false]); ?>
+            <?= $this->Form->control("role", ["placeholder" => "役割", "class" => "loginrole", "label" => false]); ?>
         </div>
 
         <div class="loginbutton">
-            <?= $this->html->link('ログイン画面へ', "http://192.168.10.10/users/login",
-            ['class' => 'output']); ?>
+            <a href="<?php echo $this->Url->build([
+             'controller' => 'Users',
+             'action' => 'login', ]); ?>"
+              class=“output”>ログイン画面へ</a>
+
             <?= $this->Form->button(__('Submit'), ['class' => 'output']); ?>
+
 
             <?= $this->Form->end() ?>
         </div>
