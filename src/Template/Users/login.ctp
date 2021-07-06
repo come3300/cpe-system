@@ -26,9 +26,10 @@ echo $this->Html->css('Login');
                 ([
                 'controller' => 'Users',
                 'action' => 'add',
+                'class' => 'output'
                  ]); ?>" 
-                 class=“output”>新規登録</a>
-
+                >新規登録</a>
+                
                 <?= $this->Form->submit(__('Login'), ['class' => 'output']); ?>
                 <?= $this->Form->end() ?>
             </div>

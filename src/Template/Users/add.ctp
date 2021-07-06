@@ -9,7 +9,7 @@ echo $this->Html->css('Add');
 <div class='login'>
     <div class="Login_header">
         <h3>CPE System</h3>
-        <p class="header-title">新規登録ページ</p>
+        
     </div>
     <div class="loginmenu">
         <h1>新規登録</h1>
