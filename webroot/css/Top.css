@@ -2,7 +2,7 @@
     background: rgba(93, 253, 154, 0.466);
     height: 80px;
     font-size: 20px;
-    text-align: right;
+    text-align: left;
     line-height: 70px;
 }
 
@@ -81,7 +81,8 @@
     width: 600px;   
     margin: 10px;
     position: absolute;
-    left: 3%;
+    left: 15%;
+    bottom:20%;
 }
 
 .exports {
@@ -95,17 +96,11 @@
 }
 
 .export {
-    margin: 20px;
-    background-color: rgba(241, 248, 253, 0.979);
+   background-color: rgba(241, 248, 253, 0.979);
     border-radius: 20px;
     border: none;
     width: 100px;
     height: 30px;
-    outline: none;
-    font-size: 10px;
-    position: absolute;
-    right: 3%;
-    text-decoration: none;   
 }
 
 .bookkeep-table{

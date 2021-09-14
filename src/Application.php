@@ -34,6 +34,12 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+        $this->addPlugin('CsvView');
+
+        $this->addPlugin('CsvView');
+
+        $this->addPlugin('CsvView');
+
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 

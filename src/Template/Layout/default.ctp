@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -18,12 +19,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>
         <?= $cakeDescription ?>:
-        
+
     </title>
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css(' Article.css') ?>
@@ -32,17 +35,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-        </ul>
-       
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+    <div class="container">
+        <nav class="top-bar expanded" data-topbar role="navigation">
+            <ul class="title-area large-3 medium-4 columns">
+            </ul>
+
+        </nav>
+        <?= $this->Flash->render() ?>
+        <div class="container clearfix">
+            <?= $this->fetch('content') ?>
+        </div>
+        <footer>
+        </footer>
     </div>
-    <footer>
-    </footer>
 </body>
+
 </html>
